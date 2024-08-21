@@ -1,0 +1,1232 @@
+{
+    "info": {
+      "_postman_id": "f2f6c31d-8a57-4f7f-9886-8bfa702b4d5a",
+      "name": "API Collection",
+      "description": "Collection of API endpoints with mock data.",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Shelves",
+        "item": [
+          {
+            "name": "Get All Shelves",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/shelves",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "shelves"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Shelf by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/shelves/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "shelves",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Shelf",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "shelf_name": "Example Shelf",
+                  "number_of_levels": 5,
+                  "number_of_diversions": 10.5,
+                  "tags": "example, shelf"
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/shelves",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "shelves"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Shelf",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "shelf_name": "Updated Shelf",
+                  "number_of_levels": 6,
+                  "number_of_diversions": 12.5,
+                  "tags": "updated, shelf"
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/shelves/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "shelves",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Shelf",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/shelves/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "shelves",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Storages",
+        "item": [
+          {
+            "name": "Get All Storages",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/storages",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "storages"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Storage by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/storages/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "storages",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Storage",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "storage_name": "Example Storage",
+                  "location_name": "Location 1",
+                  "tags": "example, storage",
+                  "shelf_id": 1
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/storages",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "storages"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Storage",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "storage_name": "Updated Storage",
+                  "location_name": "Updated Location",
+                  "tags": "updated, storage",
+                  "shelf_id": 1
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/storages/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "storages",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Storage",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/storages/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "storages",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Inventory Items",
+        "item": [
+          {
+            "name": "Get All Inventory Items",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/inventory-items",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "inventory-items"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Inventory Item by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/inventory-items/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "inventory-items",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Inventory Item",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "commercial_name": "Example Item",
+                  "main_component": "Component A",
+                  "secondary_component": "Component B",
+                  "classification": 1,
+                  "presentation": 1,
+                  "batch": "1234",
+                  "expiration": "2024-12-31",
+                  "pharmaceutical_company": "PharmaCo",
+                  "unit": "Unit",
+                  "price": 100.00,
+                  "debit_account": "Account A",
+                  "credit_account": "Account B"
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/inventory-items",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "inventory-items"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Inventory Item",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "commercial_name": "Updated Item",
+                  "main_component": "Component X",
+                  "secondary_component": "Component Y",
+                  "classification": 2,
+                  "presentation": 2,
+                  "batch": "5678",
+                  "expiration": "2025-12-31",
+                  "pharmaceutical_company": "PharmaCo Updated",
+                  "unit": "Unit Updated",
+                  "price": 150.00,
+                  "debit_account": "Account X",
+                  "credit_account": "Account Y"
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/inventory-items/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "inventory-items",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Inventory Item",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/inventory-items/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "inventory-items",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Providers",
+        "item": [
+          {
+            "name": "Get All Providers",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/providers",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "providers"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Provider by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/providers/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "providers",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Provider",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "provider_name": "Example Provider",
+                  "legal_address": "123 Legal St",
+                  "branch_address": "456 Branch St",
+                  "contact": "John Doe",
+                  "local_contact_number": "123-456-7890",
+                  "mobile_contact_number": "098-765-4321",
+                  "email_address_1": "provider@example.com",
+                  "email_address_2": "provider2@example.com",
+                  "legal_representative_name": "Jane Doe",
+                  "ncr": "NCR123",
+                  "nit": "NIT456"
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/providers",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "providers"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Provider",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "provider_name": "Updated Provider",
+                  "legal_address": "789 Updated St",
+                  "branch_address": "101 Updated St",
+                  "contact": "John Smith",
+                  "local_contact_number": "321-654-0987",
+                  "mobile_contact_number": "567-890-1234",
+                  "email_address_1": "updated_provider@example.com",
+                  "email_address_2": "updated_provider2@example.com",
+                  "legal_representative_name": "Jane Smith",
+                  "ncr": "NCR456",
+                  "nit": "NIT789"
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/providers/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "providers",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Provider",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/providers/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "providers",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Purchase Documents",
+        "item": [
+          {
+            "name": "Get All Purchase Documents",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/purchase-documents",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "purchase-documents"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Purchase Document by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/purchase-documents/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "purchase-documents",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Purchase Document",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "provider_id": 1,
+                  "ccf_number": "CCF123",
+                  "product_id": 1,
+                  "presentation": "Presentation A",
+                  "quantity": 10,
+                  "gross_amount": 100.00,
+                  "iva_amount": 13.00
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/purchase-documents",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "purchase-documents"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Purchase Document",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "provider_id": 1,
+                  "ccf_number": "CCF456",
+                  "product_id": 2,
+                  "presentation": "Presentation B",
+                  "quantity": 20,
+                  "gross_amount": 200.00,
+                  "iva_amount": 26.00
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/purchase-documents/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "purchase-documents",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Purchase Document",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/purchase-documents/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "purchase-documents",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Incoming Documents",
+        "item": [
+          {
+            "name": "Get All Incoming Documents",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/incoming-documents",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "incoming-documents"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Incoming Document by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/incoming-documents/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "incoming-documents",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Incoming Document",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "date": "2024-08-15",
+                  "type": "Type A",
+                  "description": "Description of the incoming document",
+                  "amount": 100.00,
+                  "status": "Received"
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/incoming-documents",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "incoming-documents"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Incoming Document",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "date": "2024-08-16",
+                  "type": "Type B",
+                  "description": "Updated description",
+                  "amount": 150.00,
+                  "status": "Processed"
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/incoming-documents/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "incoming-documents",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Incoming Document",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/incoming-documents/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "incoming-documents",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Users",
+        "item": [
+          {
+            "name": "Get All Users",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/users",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "users"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get User by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/users/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "users",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create User",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "name": "John Doe",
+                  "email": "john.doe@example.com",
+                  "password": "password123",
+                  "role": "admin",
+                  "status": "active"
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/users",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "users"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update User",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "name": "Jane Doe",
+                  "email": "jane.doe@example.com",
+                  "password": "newpassword123",
+                  "role": "user",
+                  "status": "inactive"
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/users/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "users",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete User",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/users/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "users",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Inventory Kardex",
+        "item": [
+          {
+            "name": "Get All Inventory Kardex",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/inventory-kardex",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "inventory-kardex"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Inventory Kardex by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/inventory-kardex/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "inventory-kardex",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Inventory Kardex",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "date": "2024-08-15",
+                  "description": "Example Kardex Entry",
+                  "quantity": 50,
+                  "type": "incoming",
+                  "inventory_item_id": 1
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/inventory-kardex",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "inventory-kardex"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Inventory Kardex",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "date": "2024-08-16",
+                  "description": "Updated Kardex Entry",
+                  "quantity": 60,
+                  "type": "outgoing",
+                  "inventory_item_id": 2
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/inventory-kardex/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "inventory-kardex",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Inventory Kardex",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/inventory-kardex/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "inventory-kardex",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Spaces",
+        "item": [
+          {
+            "name": "Get All Spaces",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/spaces",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "spaces"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Space by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/spaces/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "spaces",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Space",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "name": "New Space",
+                  "description": "Description of the new space",
+                  "location": "Location A",
+                  "capacity": 100
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/spaces",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "spaces"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Space",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": JSON.stringify({
+                  "name": "Updated Space",
+                  "description": "Updated description",
+                  "location": "Location B",
+                  "capacity": 200
+                })
+              },
+              "url": {
+                "raw": "http://localhost:3000/spaces/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "spaces",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Space",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/spaces/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "spaces",
+                  ":id"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      }
+    ]
+  }
+  
